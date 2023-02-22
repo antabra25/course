@@ -1,41 +1,6 @@
 <div class="main-wrapper">
   <h1 class="text-5xl text-center font-bold text-green-600 mt-8">Cursos</h1>
 
-  <div class=" course-form border border-green-900 shadow p-10 rounded mt-16 w-6/12">
-    <form class="flex flex-col gap-y-2">
-      <div class="field">
-        <label for="title">Titulo:</label>
-        <input name="title" id="title" #title/>
-      </div>
-      <div class="field">
-        <label for="description">Resumen:</label>
-        <input name="description" id="description" #description/>
-      </div>
-      <div class="field">
-        <label for="title">URL:</label>
-        <input name="title" id="image" type="text" min="1" max="5" step="1" #picture/>
-      </div>
-      <div class="field">
-        <label for="title">Valoración:</label>
-        <input name="title" id="rating" type="range" min="1" max="5" step="1" value="1" #rating/>
-      </div>
+<app-course-form (onAddCourse)="addCourse"></app-course-form>
 
-
-      <div class="mt-2">
-        <button class="bg-green-800 font-bold font-bold text-white h-10 w-full rounded"
-                (click)="addCourse(title,description,rating,picture)">
-          AGREGAR
-        </button>
-      </div>
-
-    </form>
-
-  </div>
-
-  <div class="course-list flex flex-col justify-end items-stretch gap-y-3 mb-8">
-
-    <app-course *ngFor="let course of courses" [course]="course"></app-course>
-
-  </div>
-
-</div>
+<app-course-list [courses]="courses"></app-course-list>

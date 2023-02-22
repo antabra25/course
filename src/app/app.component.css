@@ -5,13 +5,4 @@
   margin-right: 2rem;
 }
 
-.field {
-  @apply flex flex-col gap-2
-}
 
-.field input {
-  @apply h-10 w-80 border-2 rounded focus:border-amber-600 p-2 outline-0
-}
-.field label {
-  @apply text-green-900  font-medium
-}
