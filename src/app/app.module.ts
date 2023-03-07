@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 
+
 import {AppComponent} from './app.component';
 import {CourseComponent} from "./course/course.component";
 import { CourseListComponent } from './course-list/course-list.component';
@@ -15,10 +16,10 @@ import { CourseFormComponent } from './course-form/course-form.component';
     CourseComponent,
     CourseListComponent,
     CourseFormComponent,
-
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

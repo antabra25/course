@@ -15,6 +15,8 @@ export class AppComponent {
 
   addCourse(course:Course): Boolean {
 
+    console.log("Estoy en la app principal ",course)
+
     this.courses.push(course)
 
     return false

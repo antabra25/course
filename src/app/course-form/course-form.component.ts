@@ -14,10 +14,14 @@ constructor (){
   this.onAddCourse = new EventEmitter()
 }
 
-sendCourse(title:HTMLInputElement,description:HTMLInputElement,picture:HTMLInputElement,rating:HTMLInputElement){
+sendCourse(title:HTMLInputElement,description:HTMLInputElement,rating:HTMLInputElement,picture:HTMLInputElement):Boolean{
 
   const course:Course = new Course(title.value,description.value,rating.value,picture.value)
+  console.log(course)
   this.onAddCourse.emit(course)
+
+  return false
+
 }
 
 }

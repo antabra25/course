@@ -1,6 +1,13 @@
+
 <div class="main-wrapper">
+
   <h1 class="text-5xl text-center font-bold text-green-600 mt-8">Cursos</h1>
 
-<app-course-form (onAddCourse)="addCourse"></app-course-form>
+  <div class="content flex flex-col  w-full">
 
-<app-course-list [courses]="courses"></app-course-list>
+  <app-course-form (onAddCourse)="addCourse($event)"></app-course-form>
+  <app-course-list [courses]="courses"></app-course-list>
+
+  </div>
+
+</div>
